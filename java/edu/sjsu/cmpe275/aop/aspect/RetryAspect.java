@@ -21,10 +21,9 @@ public class RetryAspect {
 	     */
 
 	   @Around("execution(public void edu.sjsu.cmpe275.aop.ProfileService.*(..))")
-	   public void dummyAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
+	   public void interceptor(ProceedingJoinPoint joinPoint) throws Throwable {
 		 // System.out.printf("Prior to the executuion of the metohd %s\n", joinPoint.getSignature().getName());
 		 // Can do sth. here, equals before advice
-
 	      int currentRetryTimes = 0;
 	      while (true){
 	          try {

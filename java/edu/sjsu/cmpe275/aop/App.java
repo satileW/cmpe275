@@ -18,10 +18,10 @@ public class App {
         try {
         	profileService.shareProfile("Alice", "Alice", "Bob");
             profileService.readProfile("Bob", "Alice");
-            profileService.unshareProfile("Alice", "Bob");
+           // profileService.unshareProfile("Alice", "carl");
             profileService.unshareProfile("Alice", "Bob");
             profileService.shareProfile("Bob", "Alice", "Carl");
-            profileService.readProfile("Bob", "Alice");
+            profileService.readProfile("Carl", "Alice");
         } catch (AccessDeniedExeption e) {
         	System.err.println("Access Denied");
 			// TODO: handle exception

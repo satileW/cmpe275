@@ -54,7 +54,7 @@ public class AuthorizationAspect {
 		Object[] args = joinPoint.getArgs();
 		String userId = (String)args[0];
 		String targetUserId = (String)args[1];
-		if(shareList.containsKey(userId)&&
+		if(userId.equals(targetUserId)||shareList.containsKey(userId)&&
 				shareList.get(userId).contains(targetUserId)){
 			return;
 		}
